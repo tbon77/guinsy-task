@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'EmailSenderController@index');
+Route::post('/emailSender/send', 'EmailSenderController@send');
